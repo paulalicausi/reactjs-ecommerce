@@ -1,1 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+body {
+    background-image: url('assets/img/bg.jpg');
+    background-position-x: center;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+button:focus  {
+    outline: 0 !important;
+    border: 0;
+    box-shadow: 0;
+}

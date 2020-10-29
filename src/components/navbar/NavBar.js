@@ -1,23 +1,24 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import './NavBar.scss';
+import CartIcon from './../carticon/CartIcon';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav'
 
-function NavBar() {
+const NavBar = () => {
    return (
-      <nav>
-         <img src={logo} alt="logo" />
-         <ul>
-            <li>
-               <a>Inicio</a>
-            </li>
-            <li>
-               <a>Productos</a>
-            </li>
-            <li>
-               <a>Contacto</a>
-            </li>
-         </ul>
-      </nav>
+      <Navbar expand="lg">
+         <Navbar.Brand href="#home">
+            <CartIcon />
+         </Navbar.Brand>
+         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+         <Navbar.Collapse id="basic-navbar-nav">
+            <Nav>
+               <Nav.Link href="#home">Inicio</Nav.Link>
+               <Nav.Link href="#link">Productos</Nav.Link>
+               <Nav.Link href="#link">Contacto</Nav.Link>
+            </Nav>
+         </Navbar.Collapse>
+      </Navbar>
    );
 }
 export default NavBar;
