@@ -3,7 +3,6 @@ import './Home.scss';
 import '../../components/itemcount/ItemCount';
 import ItemCount from '../../components/itemcount/ItemCount';
 import ItemList from '../../components/itemList/ItemList';
-import Footer from '../../components/footer/Footer';
 import arbol from '../../assets/img/products/arbol.png';
 import carpeta from '../../assets/img/products/carpeta.png';
 import mundo from '../../assets/img/products/mundo.png';
@@ -109,7 +108,6 @@ const Home = ({greeting}) => {
                <div className="right">&nbsp;</div>
             </div>
             </div>
-            <Footer />
       </div>
    );
 }
