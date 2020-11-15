@@ -16,37 +16,43 @@ const products = [
       id: '1',
       name: 'Árbol',
       description: 'En la vida, hay que plantar un árbol, ¿por qué no empezar con este arbolito de pixeles? Lo bueno: no hay que regarlo.',
-      img: arbol
+      img: arbol,
+      price: 5000
    },
    {
        id: '2',
        name: 'Carpeta',
        description: 'Acá podrás guardar todos tus GB de archivos inservibles. Mejor que pagar Google Drive, ¿no?',
-       img: carpeta
+       img: carpeta,
+       price: 45
     },
     {
        id: '3',
        name: 'Libro',
        description: 'Una fuente de conocimiento. Y de dudas',
-       img: libro
+       img: libro,
+       price: 10000
     },
     {
        id: '4',
        name: 'Mundo',
        description: 'El mundo. Sí, a tan sólo un click puede ser tuyo. Incluye lupa de regalo.',
-       img: mundo
+       img: mundo,
+       price: 3
     },
     {
        id: '5',
        name: 'Block de notas',
        description: 'Para anotar todas las dudas que te genere el libro.',
-       img: notepad
+       img: notepad,
+       price: 200
     },
     {
       id: '6',
       name: 'Papelera de reciclaje',
       description: 'Sirve para que guardes todos tus proyectos jQuery.',
-      img: recycle
+      img: recycle,
+      price: 0.5
    }
 ];
 
