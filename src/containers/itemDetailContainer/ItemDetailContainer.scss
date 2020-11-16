@@ -1,0 +1,36 @@
+.products.single {
+    color: #000;
+    .container-inner {
+        background: rgb(238, 174, 202);
+        background: radial-gradient(
+          circle,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
+    }
+    img {
+        max-width: 100%;
+        height: 300px;
+        margin: 20px auto;
+        display: block;
+    }
+    .item-title {
+        font-family: 'VT323', monospace;
+        font-size: 45px;
+        color: lime;
+        margin: 20px 0;
+    }
+    p {
+        color: #000;
+    }
+    .buy {
+        padding: 10px;
+        width: 200px;
+        margin-top: 20px;
+        font-family: 'VT323', monospace;
+        font-size: 25px;
+        background-color: fuchsia;
+        color: white;
+        border-color: fuchsia;
+    }
+}
