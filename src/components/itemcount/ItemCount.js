@@ -16,14 +16,11 @@ const ItemCount = ({min, max}) => {
     };
 
    return (
-    <div>
-      <p>¿Cuántos ítems queres?</p>
       <div className="cantidad">
         <button className="less" onClick={restar}> - </button>
         <input type="number" value={contador} />
         <button className="more" onClick={sumar}> + </button>
       </div>
-    </div>
    );
 }
 export default ItemCount;

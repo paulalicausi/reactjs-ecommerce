@@ -6,15 +6,15 @@ p {
 
 .cantidad {
     text-align: center;
-    max-width: 200px;
+    max-width: 150px;
     position: relative;
     input {
         text-align: center;
-        max-width: 200px;
+        max-width: 150px;
         border: 0;
         height: 30px;
         background-color: transparent;
-        color: #fff;
+        color: #000;
         font-size: 18px;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -33,7 +33,7 @@ p {
         height: 30px;
         width: 30px;
         border: 0;
-        background-color: #06e0d1;
+        background-color: cyan;
         padding: 5px;
         font-size: 20px;
         color: #111;
