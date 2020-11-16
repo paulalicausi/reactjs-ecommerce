@@ -1,16 +1,13 @@
 .mainTitle_container {
-    background-image: linear-gradient(to right,#e6b3ff, #ff99dd);
+    background-image: radial-gradient(circle,#e6b3ff, rgba(238, 174, 202, 1));
     padding:30px;
-    position: absolute;
-    right: 50%;
     z-index: 2;
-    top: 95px;
-    right: 40px;
-    max-width: 300px;
+    max-width: 500px;
     box-shadow:8px 8px 5px rgba(153, 0, 115, 0.4), 0 6px 5px rgba(38, 0, 77, 0.19);
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px auto;
     .mainTitle {
         font-size: 40px;
         text-transform: uppercase;
@@ -26,7 +23,7 @@
 }
 
 .products {
-    margin-top: 15%;
+    margin: 50px 0;
     border: 2px solid;
     border-bottom-color: #535353;
     border-right-color: #535353;

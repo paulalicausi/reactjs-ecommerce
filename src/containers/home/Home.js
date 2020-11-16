@@ -83,7 +83,6 @@ const Home = ({greeting}) => {
       <div className="container">
          <div className="mainTitle_container">
             <h1 className="mainTitle">{greeting}</h1>
-            <ItemCount min="0" max="5" />
          </div>
          <div className="products">
             <div className="title">
