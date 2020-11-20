@@ -1,0 +1,18 @@
+.cart-icon {
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        height: 80px;
+    }
+    p {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: fuchsia;
+        font-family: 'VT323', monospace;
+    }
+}

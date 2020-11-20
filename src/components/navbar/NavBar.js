@@ -1,14 +1,14 @@
 import React from 'react';
 import './NavBar.scss';
-import CartIcon from './../carticon/CartIcon';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav'
+import Nav from 'react-bootstrap/Nav';
+import logo from '../../assets/img/logo.png';
 
 const NavBar = () => {
    return (
       <Navbar expand="lg">
-         <Navbar.Brand href="#home">
-            <CartIcon />
+         <Navbar.Brand href="/">
+            <img src={logo} alt="logo" />
          </Navbar.Brand>
          <Navbar.Toggle aria-controls="basic-navbar-nav" />
          <Navbar.Collapse id="basic-navbar-nav">
