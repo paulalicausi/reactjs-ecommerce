@@ -1,6 +1,7 @@
 import React from 'react';
 import './ItemDetailContainer.scss';
 import ReturnProducts from '../../db/Products'
+import { Link } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
    return (
@@ -19,7 +20,9 @@ const ItemDetailContainer = () => {
                <ReturnProducts />  
             </div>
             <div className="statusbar">
-               <div className="left">Volver a productos</div>
+               <Link to={`/`}>
+                  <div className="left">Volver a productos</div>
+               </Link>
                <div className="right">&nbsp;</div>
             </div>
          </div>

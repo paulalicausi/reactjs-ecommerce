@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from "react";
 import ItemCount from '../itemcount/ItemCount';
 
-const itemQuantity = (value) => {
-    console.log(value);
-}
-
 const ItemDetail = ({product}) => {
+    const [quantity, setQuantity] = useState(1);
+
+    const itemQuantity = (value) => {
+        setQuantity(value);
+    }
+
     return (
         <div className="row">
             <div className="col-12 col-md-6">
@@ -16,7 +18,7 @@ const ItemDetail = ({product}) => {
                 <p>{product.description}</p>
                 <p>${product.price}</p>
                 <ItemCount min={1} max={5} onAdd={itemQuantity} />
-                <button className="buy">Comprar</button>
+                <button className="buy">Comprar {quantity}</button>
             </div>
         </div>
     );
