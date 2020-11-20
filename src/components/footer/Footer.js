@@ -7,11 +7,11 @@ const Footer = () => {
     return (
     <div className="start-bar"> 
         <div className="start-button">
-           <img src={start} width="26" height="20" />
+           <img src={start} width="26" height="20" alt="Start" />
            <span>Start</span>
         </div>
         <div className="time">
-           <img src={sound} width="17" height="17"/>
+           <img src={sound} width="17" height="17" alt="Sound" />
            <span>Por Paula Licausi</span>
         </div>
      </div>
