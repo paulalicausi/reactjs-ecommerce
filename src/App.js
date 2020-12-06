@@ -6,9 +6,11 @@ import ItemDetailContainer from './containers/itemDetailContainer/ItemDetailCont
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Cart from './components/cart/Cart';
 import CartIcon from './components/carticon/CartIcon';
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
+    <CartProvider>
       <BrowserRouter>
         <NavBar />
         <Switch>
@@ -25,6 +27,7 @@ function App() {
         <CartIcon />
         <Footer />
       </BrowserRouter>
+    </CartProvider>
   );
 }
 
