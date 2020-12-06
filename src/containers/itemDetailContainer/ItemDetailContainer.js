@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './ItemDetailContainer.scss';
-import ReturnProducts from '../../db/Products'
 import { Link } from 'react-router-dom';
+import ItemDetail from '../../components/itemDetail/ItemDetail';
+import { getFirebase, getFirestore } from '../../firebase';
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
+   const [productId, setProductId] = useState();
+   const {id} = useParams();
+
+  useEffect(() =>{
+   const db = getFirestore();
+   const productCollection = db.collection("products");
+   const filterByProduct = productCollection.where("id", "==", id);
+      filterByProduct.get().then((response) => {
+          const aux = response.docs.map(element => {
+              return element.data();
+          });
+          setProductId(aux[0]);
+      });
+   }, []);
+
    return (
       <div className="container">
          <div className="products single">
@@ -17,7 +34,7 @@ const ItemDetailContainer = () => {
                <li><u>H</u>elp</li>
             </ul>
             <div className="container-inner">
-               <ReturnProducts />  
+               {productId ? <ItemDetail product={productId} /> : 'Cargando...'}            
             </div>
             <div className="statusbar">
                <Link to={`/`}>
