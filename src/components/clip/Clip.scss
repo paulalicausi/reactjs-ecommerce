@@ -1,0 +1,36 @@
+.clipContainer {
+    position: fixed;
+    bottom: 50px;
+    left: 85px;
+    .globe {
+        height: 100px;
+        width: 200px;
+        background-color: #fbfbc8;
+        border: 1px solid black;
+        border-radius: 20px;
+        position: relative;
+        left: -75px;
+        padding: 7px;
+        display: flex;
+        align-items: center;
+        p {
+            color: black;
+            font-size: 13px;
+        }
+        &::after {
+            content: '';
+            background-color: #fbfbc8;
+            height: 20px;
+            width: 20px;
+            transform: skew(40deg) rotate(45deg);
+            position: absolute;
+            bottom: -10px;
+            left: calc(50% - 15px);
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+    }
+    img {
+        height: 100px;
+    }
+}
