@@ -12,7 +12,7 @@ const Footer = () => {
         </div>
         <div className="time">
            <img src={sound} width="17" height="17" alt="Sound" />
-           <span>Por Paula Licausi</span>
+           <span><a rel="noreferrer" target="_blank" href="http://www.paulalicausi.com">Por Paula Licausi</a></span>
         </div>
      </div>
     );

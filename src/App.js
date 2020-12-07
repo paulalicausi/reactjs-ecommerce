@@ -7,6 +7,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Cart from './components/cart/Cart';
 import CartIcon from './components/carticon/CartIcon';
 import { CartProvider } from './context/CartContext';
+import ProductsContainer from './containers/productsContainer/productsContainer';
+import Clip from './components/clip/Clip';
 
 function App() {
   return (
@@ -17,7 +19,10 @@ function App() {
           <Route exact path="/">
             <Home greeting="¡¡¡¡Bienvenid@s!!!!" />
           </Route>
-          <Route exact path="/products/:id">
+          <Route exact path="/products/:category">
+            <ProductsContainer />
+          </Route>
+          <Route exact path="/product/:id">
             <ItemDetailContainer />
           </Route>
           <Route exact path="/cart/">
@@ -25,6 +30,7 @@ function App() {
           </Route>
         </Switch>
         <CartIcon />
+        <Clip />
         <Footer />
       </BrowserRouter>
     </CartProvider>

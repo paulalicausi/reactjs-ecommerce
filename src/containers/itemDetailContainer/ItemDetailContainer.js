@@ -8,7 +8,6 @@ import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
    const [productId, setProductId] = useState();
    const {id} = useParams();
-
   useEffect(() =>{
    const db = getFirestore();
    const productCollection = db.collection("products");

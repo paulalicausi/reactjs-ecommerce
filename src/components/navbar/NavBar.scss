@@ -48,27 +48,18 @@ nav {
             text-decoration: none;
             margin: 0 15px;
             @media screen and (min-width: 992px) {
-                color: #ddbeff;
+                color: fuchsia;
                 font-size: 14px;
             }
-            &:hover {
-                transition: all .2s;
-                cursor: pointer;
-                color: #222;
-                &::after {
-                    width: 100%;
-                    transition: all .2s;
+        }
+        .dropdown-menu {
+            background-color: cyan;
+            a {
+                color: black;
+                &:hover {
+                    background-color: transparent;
+                    text-decoration: underline;
                 }
-            }
-            &::after {
-                content: '';
-                width: 0;
-                height: 110%;
-                position: absolute;
-                top: -2.5%;
-                left: -2.5%;
-                background-color: #4adba3;
-                z-index: -1;
             }
         }
     }
