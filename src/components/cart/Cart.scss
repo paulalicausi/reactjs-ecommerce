@@ -6,4 +6,22 @@
         margin: 10px 0;
         text-align: center;
     }
+    p {
+        font-size: 15px;
+    }
+    .titulo {
+        p {
+            font-weight: 600;
+        }
+    }
+    button {
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        img {
+            width: 30px;
+            height: auto !important;
+            margin: 0 !important;
+        }
+    }
 }

@@ -11,7 +11,7 @@ const ItemDetail = ({product}) => {
     }
 
     const addTo = () => {
-        handleCartItems({id: product.id, name: product.name}, quantity);
+        handleCartItems({id: product.id, name: product.name, price: product.price}, quantity);
     }
 
     return (
