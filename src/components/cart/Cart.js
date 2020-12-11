@@ -5,7 +5,7 @@ import './Cart.scss';
 import deleteIcon from '../../assets/img/delete.png';
 
 const Cart = () => {
-   const { cartItems, deleteItem } = useCartContext();
+   const { cartItems, deleteItem, totalPrice } = useCartContext();
     return (
       <div className="container cart">
          <div className="products single">
@@ -48,12 +48,13 @@ const Cart = () => {
                         </div>
                         <div className="col-12 col-md-2">
                            <button onClick={() => {deleteItem(item.id)}}>
-                              <img src={deleteIcon} />
+                              <img src={deleteIcon} alt="Delete Icon" />
                            </button>
                         </div>
                      </div>
                   ))            
                : 'No hay productos en el carrito :('}
+               <p className="mt-2"><b>Total: ${totalPrice() ? totalPrice() : 0}</b></p>
             </div>
             <div className="statusbar">
                <Link to={`/`}>
