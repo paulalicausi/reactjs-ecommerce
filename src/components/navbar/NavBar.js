@@ -18,13 +18,33 @@ const NavBar = () => {
          <Navbar.Toggle aria-controls="basic-navbar-nav" />
          <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-               <Nav.Link href="/">Inicio</Nav.Link>
+               <Nav.Link>
+                  <Link to="/">   
+                     Inicio
+                  </Link>
+               </Nav.Link>
                <NavDropdown title="Productos" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="/products/estudio">Estudio</NavDropdown.Item>
-                  <NavDropdown.Item href="/products/naturaleza">Naturaleza</NavDropdown.Item>
-                  <NavDropdown.Item href="/products/tecnologia">Tecnología</NavDropdown.Item>
+                  <NavDropdown.Item>
+                     <Link to="/products/estudio">   
+                        Estudio
+                     </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                     <Link to="/products/naturaleza">   
+                        naturaleza
+                     </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                     <Link to="/products/tecnologia">   
+                        Tecnología
+                     </Link>
+                  </NavDropdown.Item>
                </NavDropdown>
-               <Nav.Link href="/cart">Carrito</Nav.Link>
+               <Nav.Link>
+                  <Link to="/cart">   
+                     carrito
+                  </Link>
+               </Nav.Link>
             </Nav>
          </Navbar.Collapse>
       </Navbar>
