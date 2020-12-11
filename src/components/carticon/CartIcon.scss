@@ -5,6 +5,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 1024px) {
+        position: relative;
+    }
     img{
         height: 80px;
     }

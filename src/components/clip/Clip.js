@@ -9,7 +9,7 @@ const Clip = () => {
             <div className="globe">
                 <p>Hola, soy el Clip tu asistente en Win95 Shop, ¿en qué puedo ayudarte?</p>
             </div>
-            <img src={clip} />
+            <img src={clip} alt="Clip" />
        </div>
    );
 }

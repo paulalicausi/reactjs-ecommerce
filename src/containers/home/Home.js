@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.scss';
 import '../../components/itemcount/ItemCount';
-import { getFirebase, getFirestore } from '../../firebase';
+import { getFirestore } from '../../firebase';
 import ItemList from '../../components/itemList/ItemList';
 
 const Home = ({greeting}) => {

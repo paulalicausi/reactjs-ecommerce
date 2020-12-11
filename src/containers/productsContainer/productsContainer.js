@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../../components/itemcount/ItemCount';
-import { getFirebase, getFirestore } from '../../firebase';
+import { getFirestore } from '../../firebase';
 import ItemList from '../../components/itemList/ItemList';
 import { Link, useParams } from 'react-router-dom';
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './ItemDetailContainer.scss';
 import { Link } from 'react-router-dom';
 import ItemDetail from '../../components/itemDetail/ItemDetail';
-import { getFirebase, getFirestore } from '../../firebase';
+import { getFirestore } from '../../firebase';
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {

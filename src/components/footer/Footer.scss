@@ -10,7 +10,7 @@
     border-top: 3px solid #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;  
     .start-button{
         display: inline-block;
         border-top: 2px solid #fff;
@@ -24,6 +24,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 1024px) {
+          width: auto;
+        }
       }
       .time{
         position: relative;
@@ -37,6 +40,9 @@
         align-items: center;
         justify-content: space-between;
         padding: 5px;
+        @media (max-width: 1024px) {
+          width: auto;
+        }
         &>span{
             font-size: 0.8em;
         }
