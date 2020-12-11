@@ -18,7 +18,7 @@ const ProductsContainer = () => {
           })
           setProducts(aux);
       });
-  }, []);
+  }, [category]);
 
    return (
       <div className="container">

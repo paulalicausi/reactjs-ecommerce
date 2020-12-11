@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
           });
           setProductId(aux[0]);
       });
-   }, []);
+   }, [id]);
 
    return (
       <div className="container">
