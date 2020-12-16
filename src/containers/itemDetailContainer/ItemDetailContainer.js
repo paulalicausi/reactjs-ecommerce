@@ -7,8 +7,10 @@ import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
    const [productId, setProductId] = useState();
+   const [noProduct, setNoProduct] = useState();
    const {id} = useParams();
-  useEffect(() =>{
+
+   useEffect(() =>{
    const db = getFirestore();
    const productCollection = db.collection("products");
    const filterByProduct = productCollection.where("id", "==", id);
@@ -16,7 +18,11 @@ const ItemDetailContainer = () => {
           const aux = response.docs.map(element => {
               return element.data();
           });
-          setProductId(aux[0]);
+          if(aux[0]){
+            setProductId(aux[0]);
+          }else{
+            setNoProduct('Inexistente');
+          }
       });
    }, [id]);
 
@@ -33,7 +39,7 @@ const ItemDetailContainer = () => {
                <li><u>H</u>elp</li>
             </ul>
             <div className="container-inner">
-               {productId ? <ItemDetail product={productId} /> : 'Cargando...'}            
+               {productId ? <ItemDetail product={productId} /> : noProduct ? <p>Producto inexistente :(</p> : 'Cargando...'}            
             </div>
             <div className="statusbar">
                <Link to={`/`}>
