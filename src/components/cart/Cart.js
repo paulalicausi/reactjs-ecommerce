@@ -1,11 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import useCartContext from '../../context/CartContext';
 import './Cart.scss';
 import deleteIcon from '../../assets/img/delete.png';
 
 const Cart = () => {
-   const { cartItems, deleteItem, totalPrice } = useCartContext();
+   const { cartItems, deleteItem, totalPrice, buyItems, setLastname, setName, setEmail, error, orderId } = useCartContext();
+   const history = useHistory();
+   if(orderId) {
+      history.push("/checkout");
+   }
+
     return (
       <div className="container cart">
          <div className="products single">
@@ -55,6 +60,25 @@ const Cart = () => {
                   ))            
                : 'No hay productos en el carrito :('}
                <p className="mt-2"><b>Total: ${totalPrice() ? totalPrice() : 0}</b></p>
+               <h2>Tus datos</h2>
+               <form>
+                  <div className="row">
+                     <div className="col-6">
+                        <input type="text" className="form-control" placeholder="Nombre" onChange={event => setName(event.target.value)} />
+                     </div>
+                     <div className="col-6">
+                        <input type="text" className="form-control" placeholder="Apellido" onChange={event => setLastname(event.target.value)} />
+                     </div>
+                     <div className="col-6">
+                        <input type="text" className="form-control" placeholder="E-mail" onChange={event => setEmail(event.target.value)}/>
+                     </div>
+                     <div className="col-6">
+                        <input type="text" className="form-control" placeholder="Confirmar e-mail" />
+                     </div>
+                     <button onClick={buyItems}>Realizar compra</button>
+                  </div>
+                  <p className="error">{error ? error : ''}</p>
+                  </form>
             </div>
             <div className="statusbar">
                <Link to={`/`}>

@@ -9,6 +9,7 @@ import CartIcon from './components/carticon/CartIcon';
 import { CartProvider } from './context/CartContext';
 import ProductsContainer from './containers/productsContainer/productsContainer';
 import Clip from './components/clip/Clip';
+import Checkout from './components/checkout/Checkout';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path="/cart/">
             <Cart />
+          </Route>
+          <Route exact path="/checkout/">
+            <Checkout />
           </Route>
         </Switch>
         <CartIcon />

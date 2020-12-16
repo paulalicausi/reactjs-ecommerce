@@ -1,0 +1,29 @@
+.checkout {
+    h2 {
+        font-family: 'VT323', monospace;
+        font-size: 25px;
+        color: greenyellow;
+        margin: 10px 0;
+        text-align: center;
+    }
+    h3 {
+        font-size: 20px;
+        font-family: 'VT323', monospace;
+        color: yellow;
+        letter-spacing: 2px;
+    }
+    p {
+        font-size: 15px;
+    }
+    button {
+        border-radius: 0;
+        background-color: blueviolet;
+        box-shadow: none;
+        padding: 5px 10px;
+        border: 1.2px solid white;
+        min-width: 200px;
+        display: block;
+        margin: 0 auto;
+        color: white;
+    }
+}
