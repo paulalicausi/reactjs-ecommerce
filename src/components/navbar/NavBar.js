@@ -3,24 +3,21 @@ import './NavBar.scss';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
 import logo from '../../assets/img/logo.png';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
    return (
-      <Navbar expand="lg">
+      <Navbar>
          <Navbar.Brand>
             <Link to="/">
                <img src={logo} alt="logo" />
             </Link>
          </Navbar.Brand>
-         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-         <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-                  <Link to="/">   
-                     Inicio
-                  </Link>
+               <Link to="/">   
+                  Inicio
+               </Link>
                <NavDropdown title="Productos" id="basic-nav-dropdown">
                      <Link className="dropdown-item" to="/products/estudio">   
                         Estudio
@@ -32,11 +29,10 @@ const NavBar = () => {
                         Tecnología
                      </Link>
                </NavDropdown>
-                  <Link to="/cart">   
-                     carrito
-                  </Link>
+               <Link to="/cart">   
+                  carrito
+               </Link>
             </Nav>
-         </Navbar.Collapse>
       </Navbar>
    );
 }

@@ -5,58 +5,42 @@ nav {
     z-index: 1;
     min-height: 80px;
     padding: 20px 0;
+    justify-content: space-between !important;
     img {
         height: 75px;
     }
-    .navbar-toggler {
-        border: 0;
-        color: rgba(255, 255, 255, 1);
-        z-index: 4;
-        .navbar-toggler-icon {
-            filter: invert(1);
+    a {
+        font-family: 'Roboto Mono', monospace;
+        text-transform: uppercase;
+        font-size: 25px;
+        letter-spacing: 3px;
+        font-weight: 300;
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+        margin: 0 15px;
+        padding: .5rem 1rem;
+        color: fuchsia !important;
+        font-size: 14px;   
+        @media (max-width: 1024px) {
+            text-align: right;
         }
     }
-    #basic-navbar-nav {
-        background-image: linear-gradient(to right, #e6b3ff, #ff99dd);
-        &.show, &.collapsing {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            @media screen and (min-width: 992px) {
-                background-image: none;
-                justify-content: flex-end;
-                height: auto;
-                width: auto;
-                position: relative;
-            }
-        }
-        @media screen and (min-width: 992px) {
-            background-image: none;
-            justify-content: flex-end;
-        }
-        a {
-            font-family: 'Roboto Mono', monospace;
-            text-transform: uppercase;
-            font-size: 25px;
-            letter-spacing: 3px;
-            font-weight: 300;
-            position: relative;
-            z-index: 1;
-            text-decoration: none;
-            margin: 0 15px;
-            padding: .5rem 1rem;
-            @media screen and (min-width: 992px) {
-                color: fuchsia;
-                font-size: 14px;
-            }
+    .navbar-nav {
+        background-image: none;
+        justify-content: flex-end;
+        height: auto;
+        width: auto;
+        position: relative;
+        background-image: none;
+        justify-content: flex-end;
+        @media (max-width: 1024px) {
+            flex-direction: column !important;
+            padding-top: 20px;
         }
         .dropdown-menu {
             background-color: cyan;
             a {
-                color: black;
                 &:hover {
                     background-color: transparent;
                     text-decoration: underline;
