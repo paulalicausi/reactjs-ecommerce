@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from 'react';
-import { Redirect, useHistory } from 'react-router-dom';
-  import { getFirestore } from '../firebase';
+import { getFirestore } from '../firebase';
 
 const CartContext = createContext();
 const useCartContext = () => useContext(CartContext);
@@ -11,6 +10,7 @@ export const CartProvider = ({children}) => {
     const [name, setName] = useState('');
     const [lastname, setLastname] = useState('');
     const [email, setEmail] = useState('');
+    const [confirmationEmail, setConfirmationEmail] = useState('');
     const [error, setErrror] = useState('');
 
     const handleCartItems = (product, quantity) => {
@@ -51,21 +51,35 @@ export const CartProvider = ({children}) => {
           items: cartItems,
           total: totalPrice()
        };
- 
-       if(name === '' || lastname === '' || email === '') {
-          setErrror('Complete todos los campos.');
-       }else {
+
+       let validCharEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+       if(name === '' || lastname === '' || email === '' || confirmationEmail === '') {
+            setErrror('Complete todos los campos.');
+        } else if (!email.match(validCharEmail)) {
+            setErrror('Ingrese un e-mail válido.');
+        } else if(confirmationEmail !== email){
+            setErrror('Los e-mail deben coincidir.');
+        } else {
           const db = getFirestore();
           const orders = db.collection("orders");
           orders.add(sell).then(({id}) => {
              setOrderId(id);
           }).catch(error => {
-             console.log(error);
+             alert(error);
           });
        }
     }
 
-    return <CartContext.Provider value={{cartItems, ItemCount, handleCartItems, deleteItem, totalPrice, buyItems, setName, setLastname, setEmail, setOrderId, orderId, error}}>{children}</CartContext.Provider>
+    const newOrder = () => {
+        setOrderId();
+        setName();
+        setLastname();
+        setEmail();
+        setCartItems([]);
+    }
+
+    return <CartContext.Provider value={{cartItems, ItemCount, handleCartItems, deleteItem, totalPrice, buyItems, setName, setLastname, setConfirmationEmail, setEmail, setOrderId, orderId, error, newOrder}}>{children}</CartContext.Provider>
 }
 
 export default useCartContext;
